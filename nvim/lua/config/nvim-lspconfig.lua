@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
 end
 
 local nvim_lsp = require("lspconfig")
-local servers = {"solang", "tsserver", "rust_analyzer"}
+local servers = {"solang", "tsserver", "rust_analyzer", "jsonls"}
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
