@@ -11,3 +11,12 @@ vim.cmd [[autocmd FileType rust nnoremap <leader>] :!cargo run<cr>]]
 -- solidity
 vim.cmd [[autocmd FileType solidity nnoremap <leader>[ :!yarn compile<cr>]]
 vim.cmd [[autocmd FileType solidity nnoremap <leader>] :!yarn test<cr>]]
+--cairo
+vim.cmd [[autocmd FileType cairo nnoremap <leader>[ :lua cairo_compile()<cr>]]
+
+function cairo_compile()
+  local filename = vim.fn.expand("%:t:r")
+  local res = filename .. "_compiled.json"
+  vim.cmd(":!cairo-compile % --output " .. res)
+  print("Compiled!")
+end
