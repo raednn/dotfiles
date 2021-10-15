@@ -37,6 +37,7 @@ require("packer").startup(
       "nvim-telescope/telescope.nvim",
       requires = "nvim-lua/plenary.nvim"
     }
+    use {"TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim"}
 
     -- Languages
     use "neovim/nvim-lspconfig"
