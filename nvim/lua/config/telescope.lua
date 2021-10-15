@@ -9,7 +9,8 @@ require "telescope".setup {
         ["q"] = actions.close,
         ["<c-c>"] = actions.close
       }
-    }
+    },
+    file_ignore_patterns = {"node_modules", "fonts", "icons"}
   }
 }
 require "telescope".load_extension "projects"
