@@ -101,6 +101,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
+  neogit = {
+    loaded = true,
+    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/neogit"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
