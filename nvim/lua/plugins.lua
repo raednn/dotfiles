@@ -2,7 +2,7 @@ require "config.nvim-mapper"
 require "config.telescope"
 require "config.tagbar"
 require "config.nvim-lspconfig"
-require "config.nvim-compe"
+require "config.nvim-cmp"
 require "config.nvim-treesitter"
 require "config.nvim-tree"
 require "config.nvim-autopairs"
@@ -41,10 +41,16 @@ require("packer").startup(
 
     -- Languages
     use "neovim/nvim-lspconfig"
-    use "hrsh7th/nvim-compe"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/nvim-cmp"
     use "tomlion/vim-solidity"
     use "folke/lua-dev.nvim"
     use "cespare/vim-toml"
+
+    -- Snippets
+    use "hrsh7th/cmp-vsnip"
+    use "hrsh7th/vim-vsnip"
 
     -- UI
     use {"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons"}

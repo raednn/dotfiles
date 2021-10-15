@@ -31,10 +31,11 @@ local on_attach = function(client, bufnr)
 end
 
 local nvim_lsp = require("lspconfig")
-local servers = {"solang", "tsserver", "rust_analyzer", "jsonls"}
+local servers = {"solang", "pyright", "tsserver", "rust_analyzer", "jsonls"}
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
   }
 end

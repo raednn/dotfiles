@@ -9,8 +9,8 @@ vim.o.ignorecase = true
 vim.o.termguicolors = true
 vim.g.mapleader = " "
 
--- needed for nvim-compe
-vim.o.completeopt = "menuone,noselect"
+-- needed for nvim-cmp
+vim.o.completeopt = "menu,menuone,noselect"
 
 -- window-local options
 vim.wo.number = true
