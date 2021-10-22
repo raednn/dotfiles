@@ -81,13 +81,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
   },
+  ["cmp-tabnine"] = {
+    loaded = true,
+    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/cmp-tabnine"
+  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/cmp-vsnip"
-  },
-  ["formatter.nvim"] = {
-    loaded = true,
-    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/formatter.nvim"
   },
   fzf = {
     loaded = true,
@@ -129,10 +129,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
-  ["nvim-mapper"] = {
-    loaded = true,
-    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/nvim-mapper"
-  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -153,6 +149,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
+  ["orgmode.nvim"] = {
+    loaded = true,
+    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/orgmode.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/packer.nvim"
@@ -172,6 +172,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/raeden/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/raeden/.local/share/nvim/site/pack/packer/start/toggleterm.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

@@ -5,6 +5,7 @@ map("i", "jj", "<esc>", options)
 map("i", "jk", "<esc>", options)
 map("n", "j", "gj", options)
 map("n", "k", "gk", options)
+map("n", ";", ":", options)
 
 map("n", "<leader>w", ":w<cr>", options)
 map("n", "<leader>q", ":q<cr>", options)

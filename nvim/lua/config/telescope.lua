@@ -14,7 +14,6 @@ require "telescope".setup {
   }
 }
 require "telescope".load_extension "projects"
-require "telescope".load_extension "mapper"
 
 options = {noremap = true}
 
@@ -54,6 +53,5 @@ map("n", ",gs", "<cmd>Telescope git_status<cr>", options)
 map("n", ",gbb", "<cmd>Telescope git_branches<cr>", options)
 -- Extensions
 map("n", ",p", "<cmd>Telescope projects<cr>", options)
-map("n", ",MM", "<cmd>Telescope mapper<cr>", options)
 -- Custom
 map("n", "<c-p>", "<cmd>lua project_files()<cr>", options)

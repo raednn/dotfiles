@@ -1,4 +1,3 @@
-require "config.nvim-mapper"
 require "config.telescope"
 require "config.tagbar"
 require "config.nvim-lspconfig"
@@ -6,8 +5,8 @@ require "config.nvim-cmp"
 require "config.nvim-treesitter"
 require "config.nvim-tree"
 require "config.nvim-autopairs"
-require "config.project"
-require "config.formatter"
+require "config.orgmode"
+require "config.toggleterm"
 
 require("packer").startup(
   function()
@@ -15,11 +14,6 @@ require("packer").startup(
     use "wbthomason/packer.nvim"
 
     -- Editor
-    -- needs to be one the first loaded plugin
-    use {
-      "lazytanuki/nvim-mapper",
-      before = "telescope.nvim"
-    }
 
     use "junegunn/fzf"
     use "b3nj5m1n/kommentary"
@@ -29,7 +23,6 @@ require("packer").startup(
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use {"lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim"}
     use "lukas-reineke/indent-blankline.nvim"
-    use "mhartington/formatter.nvim"
     use "ahmedkhalf/project.nvim"
     use "tpope/vim-surround"
 
@@ -37,16 +30,21 @@ require("packer").startup(
       "nvim-telescope/telescope.nvim",
       requires = "nvim-lua/plenary.nvim"
     }
+    use {'kristijanhusak/orgmode.nvim', branch = 'tree-sitter'}
+
     use {"TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim"}
+    use "akinsho/toggleterm.nvim"
 
     -- Languages
     use "neovim/nvim-lspconfig"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/nvim-cmp"
-    use "tomlion/vim-solidity"
+    use "ChristianChiarulli/vim-solidity"
     use "folke/lua-dev.nvim"
     use "cespare/vim-toml"
+
+    use {"tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp"}
 
     -- Snippets
     use "hrsh7th/cmp-vsnip"
@@ -65,6 +63,8 @@ require("packer").startup(
 require "lua-dev".setup {}
 require "gitsigns".setup {}
 -- require "nightfox".load()
+
+require "project_nvim".setup {}
 
 require "indent_blankline".setup {}
 require "lualine".setup {

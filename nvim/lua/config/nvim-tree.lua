@@ -1,12 +1,19 @@
-vim.g.nvim_tree_auto_open = 1
-vim.g.nvim_tree_auto_close = 1
-
 local map = vim.api.nvim_set_keymap
 local view = require "nvim-tree.view"
 
+vim.g.nvim_tree_group_empty = 1
+vim.g.nvim_tree_respect_buf_cwd = 1
+vim.g.nvim_tree_root_folder_mofifier = ":t:r"
+
 require "nvim-tree".setup {
   disable_netrw = true,
-  update_cwd = true
+  update_cwd = true,
+  auto_open = true,
+  auto_close = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true
+  }
 }
 
 function toggle_tree()
